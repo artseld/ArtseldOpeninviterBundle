@@ -78,6 +78,7 @@ imports:
 
 ``` bash
 $ php app/console assets:install web/
+```
 
 ## Copyright
 
