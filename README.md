@@ -21,7 +21,7 @@ Add the following entries to the deps in the root of your project file:
 
 ```
 [ArtseldOpeninviterBundle]
-    git=git://github.com/genemu/ArtseldOpeninviterBundle.git
+    git=git://github.com/artseld/ArtseldOpeninviterBundle.git
     target=bundles/Artseld/OpeninviterBundle
 ```
 
