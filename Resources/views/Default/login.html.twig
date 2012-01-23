@@ -1,0 +1,9 @@
+{% extends 'ArtseldOpeninviterBundle::layout.html.twig' %}
+{% form_theme login_form 'ArtseldOpeninviterBundle::form.html.twig' %}
+
+{% block content %}
+    <form class="artseld_openinviter_form" id="artseld_openinviter_login_form" action="{{ path('artseld_openinviter_login') }}" method="post" {{ form_enctype(login_form) }}>
+    {{ form_widget(login_form) }}
+    <div><input type="submit" value="{{ 'artseld_openinviter.action.import'|trans }}" /></div>
+    </form>
+{% endblock %}

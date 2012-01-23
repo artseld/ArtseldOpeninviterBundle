@@ -1,0 +1,6 @@
+{% extends 'ArtseldOpeninviterBundle::layout.html.twig' %}
+
+{% block content %}
+    <div>{{ 'artseld_openinviter.text.all_done'|trans }}</div>
+    <div><a href="{{ path('artseld_openinviter_login') }}">{{ 'artseld_openinviter.link.send_to_another'|trans }}</a></div>
+{% endblock %}

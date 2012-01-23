@@ -1,0 +1,17 @@
+# src/Artseld/OpeninviterBundle/Resources/config/config.yml
+
+artseld_openinviter:
+    username: "dmitry-kozlovich"
+    private_key: "c0a0be8dcc0dfb2168f02b941406b00e"
+    plugins_cache_time: "1800"
+    plugins_cache_file: "oi_plugins.php"
+    cookie_path: "/tmp"
+    local_debug: "on_error"
+    remote_debug: ""
+    hosted: ""
+    proxies: []
+    stats: ""
+    stats_user: ""
+    stats_password: ""
+    update_files: "1"
+    transport: "wget"

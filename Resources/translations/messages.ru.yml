@@ -1,0 +1,35 @@
+artseld_openinviter:
+    #menu:
+    action:
+        import: Импортировать контакты
+        send: Отправить
+        toggle_select: Выбрать/Отменить все
+    link:
+        send_to_another: Отправить еще?
+    label:
+        email: E-mail
+        password: Пароль
+        provider: Провайдер
+        message: Сообщение
+        recipients: Получатели
+        type_email: Почтовые сервисы
+        type_social: Социальные сети
+    text:
+        message_subject: Вы приглашены на %link%
+        message_body: %username% приглашает Вас на %link%
+        all_done: Приглашение отправлено, спасибо.
+    notification:
+        success:
+            invitations_sent: Поздравляем, Ваше приглашение отправлено!
+        error:
+            email_not_set: E-mail отправителя не установлен!
+            no_active_session: Сессия не активна!
+            message_missing: Сообщение отсутствует!
+            contacts_not_selected: Вы не выбрали ни одного контакта для приглашения!
+            incorrect_login: Неверный логин. Пожалуйста проверьте E-mail и пароль которые Вы вводите и повторите попытку
+            cannot_get_contacts: Невозможно получить контакты!
+            invalid_service_provider: Неверный провайдер услуг!
+            username_instead_email: Пожалуйста введите полный E-mail, а не имя пользователя
+            email_instead_username: Пожалуйста введите имя пользователя, не полный E-mail
+            invalid_userdomain: <strong>%userdomain%</strong> не правильный для этого провайдера
+            invitations_with_errors: Были обнаружены ошибки при отправке приглашений<br />Попробуйте позже!

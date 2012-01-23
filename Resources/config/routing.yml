@@ -1,0 +1,17 @@
+# src/Artseld/OpeninviterBundle/Resources/config/routing.yml
+
+artseld_openinviter_login:
+    pattern: /
+    defaults: { _controller: ArtseldOpeninviterBundle:Default:login }
+
+artseld_openinviter_invite:
+    pattern: /invite/
+    defaults: { _controller: ArtseldOpeninviterBundle:Default:invite }
+    #requirements:
+    #    _method:  POST
+
+artseld_openinviter_done:
+    pattern: /done/
+    defaults: { _controller: ArtseldOpeninviterBundle:Default:done }
+    #requirements:
+    #    _method:  POST

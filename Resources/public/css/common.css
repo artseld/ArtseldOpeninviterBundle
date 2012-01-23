@@ -1,0 +1,66 @@
+.artseld_openinviter_form {
+    display: block;
+    margin: 0 auto;
+}
+
+.artseld_openinviter_form * {
+    margin: 0;
+    padding: 0;
+}
+
+.artseld_openinviter_form label {
+    min-width: 100px;
+    float: left;
+    font-weight: bold;
+}
+
+.artseld_openinviter_form input[type="checkbox"] {
+    float: left;
+    margin-right: 4px;
+}
+
+.artseld_openinviter_form span.required {
+    float: left;
+    margin-right: 4px;
+    color: #FF0000;
+
+}
+
+.artseld_openinviter_form div {
+    float: left;
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+.artseld_openinviter_notification,
+.artseld_openinviter_form ul {
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 4px;
+    list-style: none;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.artseld_openinviter_notification,
+.artseld_openinviter_form ul li {
+    padding: 2px;
+}
+
+.artseld_openinviter_notification .success {
+    color: #00FF00;
+    border-color: #00FF00;
+}
+
+.artseld_openinviter_notification .error,
+.artseld_openinviter_form ul {
+    color: #FF0000;
+    border-color: #FF0000;
+}
+
+#artseld_openinviter_copyright {
+    float: left;
+    margin: 11px 0;
+}

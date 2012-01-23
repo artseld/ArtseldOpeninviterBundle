@@ -1,0 +1,10 @@
+# src/Artseld/OpeninviterBundle/Resources/config/services.yml
+
+#parameters:
+#    twig.extension.artseld.openinviter.class:      Artseld\OpeninviterBundle\Twig\Extension\OpeninviterExtension
+#    twig.extension.artseld.openinviter.transport:  twig
+#
+#services:
+#    twig.extension.artseld.openinviter:
+#        class:        %twig.extension.artseld.openinviter.class%
+#        arguments:    [%twig.extension.artseld.openinviter.transport%]

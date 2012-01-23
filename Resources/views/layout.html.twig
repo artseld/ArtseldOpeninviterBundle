@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="{{ asset('bundles/artseldopeninviter/css/common.css') }}" type="text/css" media="all" />
+        <title>{% block title %}Artseld Openinviter Bundle{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/artseldopeninviter/css/common.css') }}" />
+        {% endblock %}
+
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('bundles/artseldopeninviter/js/common.js') }}"></script>
+        {% endblock %}
+
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% if app.session.hasFlash('artseld_openinviter.notification.success') %}
+        <div class="artseld_openinviter_notification success">
+            {{ app.session.flash('artseld_openinviter.notification.success')|trans }}
+        </div>
+        {% endif %}
+        {% if app.session.hasFlash('artseld_openinviter.notification.error') %}
+        <div class="artseld_openinviter_notification error">
+            {{ app.session.flash('artseld_openinviter.notification.error')|trans }}
+        </div>
+        {% endif %}
+        {% block content '' %}
+        <div id="artseld_openinviter_copyright"><a href='http://openinviter.com/'>
+            <img src='http://openinviter.com/images/banners/banner_blue_1.gif?nr=69900' border='0' alt='Powered by OpenInviter.com' title='Powered by OpenInviter.com'>
+        </a></div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+artseld_openinviter:
+    #menu:
+    action:
+        import: Import contacts
+        send: Send
+        toggle_select: Select/Deselect all
+    link:
+        send_to_another: Send again?
+    label:
+        email: E-mail
+        password: Password
+        provider: Provider
+        message: Message
+        recipients: Recipients
+        type_email: Mail providers
+        type_social: Social networks
+    text:
+        message_subject: You are invited to %link%
+        message_body: %username% invite you to %link%
+        all_done: Invitation sent, thank you.
+    notification:
+        success:
+            invitations_sent: Congratulations, your invitation was sent successfully!
+        error:
+            email_not_set: Sender E-mail is not set!
+            no_active_session: Session is not active!
+            message_missing: Message is not set!
+            contacts_not_selected: You are not choose any contact for inviting!
+            incorrect_login: Incorrect login. Please check E-mail and password and try again
+            cannot_get_contacts: Cannot get contacts!
+            invalid_service_provider: Invalid service provider!
+            username_instead_email: Please enter full E-mail, not username
+            email_instead_username: Please enter username, not full E-mail
+            invalid_userdomain: <strong>%userdomain%</strong> is invalid for this provider
+            invitations_with_errors: Errors were found with invitations sending<br />Try again later!
