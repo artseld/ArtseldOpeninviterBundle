@@ -65,7 +65,7 @@ public function registerBundles()
 
 ### Step 4: Minimal configuration
 
-1. Add configuration into your application config.yml (recommended):
+Add configuration into your application config.yml (recommended):
 
 ``` yaml
 artseld_openinviter:
@@ -96,7 +96,7 @@ imports:
 
 Add your USERNAME and API-KEY and edit another configuration settings if necessary.
 
-2. Add route to application routing.yml (example):
+Finally, add route to application routing.yml (example):
 
 ``` yaml
 # app/config/routing.yml
