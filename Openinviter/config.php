@@ -1,7 +1,7 @@
 <?php
 $openinviter_settings=array(
-    'username'=>"dmitry-kozlovich",
-    'private_key'=>"c0a0be8dcc0dfb2168f02b941406b00e",
+    'username'=>"USERNAME",
+    'private_key'=>"API-KEY",
     'cookie_path'=>"/tmp",
     'message_body'=>"You are invited to http://www.warecorp.com",
     'message_subject'=>" is inviting you to http://www.warecorp.com",
