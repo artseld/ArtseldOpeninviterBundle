@@ -33,6 +33,8 @@ class ArtseldOpeninviter extends \openinviter
     protected $currentPlugin    = array();
     protected $internalParams   = array();
 
+    protected $customPlugins    = array('yandex');
+
     /**
      * Construct Openinviter instance
      * @param \Symfony\Component\DependencyInjection\Container $container
@@ -84,7 +86,8 @@ class ArtseldOpeninviter extends \openinviter
             $array_file = array();
             $temp = glob($this->basePath . "/plugins/*.plg.php");
             foreach ($temp as $file) {
-                $array_file[basename($file, '.plg.php')] = $file;
+                $array_file[basename($file, '.plg.php')] = in_array( basename($file, '.plg.php'), $this->customPlugins ) ?
+                    $this->basePath . '/../ArtseldOpeninviter/plugins/' . basename($file) : $file;
             }
             if (!$update) {
                 if ($this->settings['hosted']) {
@@ -234,9 +237,14 @@ class ArtseldOpeninviter extends \openinviter
                     $this->plugin->hostedServices = $this->getPlugins();
                 }
             }
-        } elseif (file_exists($this->basePath . '/plugins/' . $pluginName . '.plg.php')) {
+        } elseif (file_exists($this->basePath . '/../ArtseldOpeninviter/plugins/' . $pluginName . '.plg.php') ||
+            file_exists($this->basePath . '/plugins/' . $pluginName . '.plg.php')) {
             if (!class_exists( $pluginName )) {
-                require_once($this->basePath . '/plugins/' . $pluginName . '.plg.php');
+                if (in_array($pluginName, $this->customPlugins)) {
+                    require_once($this->basePath . '/../ArtseldOpeninviter/plugins/' . $pluginName . '.plg.php');
+                } else {
+                    require_once($this->basePath . '/plugins/' . $pluginName . '.plg.php');
+                }
             }
             $this->plugin = new $pluginName();
             $this->plugin->settings = $this->settings;
