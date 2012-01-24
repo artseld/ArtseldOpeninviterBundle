@@ -65,7 +65,27 @@ public function registerBundles()
 
 ### Step 4: Minimal configuration
 
-Add resource link to imports section in application config.yml:
+1. Add configuration into your application config.yml (recommended):
+
+``` yaml
+artseld_openinviter:
+    username: "USERNAME"
+    private_key: "API-KEY"
+    plugins_cache_time: "1800"
+    plugins_cache_file: "oi_plugins.php"
+    cookie_path: "/tmp"
+    local_debug: "on_error"
+    remote_debug: ""
+    hosted: ""
+    proxies: []
+    stats: ""
+    stats_user: ""
+    stats_password: ""
+    update_files: "1"
+    transport: "wget"
+```
+
+or add resource link to imports section in application config.yml:
 
 ``` yaml
 # app/config/config.yml
@@ -73,6 +93,20 @@ Add resource link to imports section in application config.yml:
 imports:
     - { resource: '@ArtseldOpeninviterBundle/Resources/config/config.yml' }
 ```
+
+Add your USERNAME and API-KEY and edit another configuration settings if necessary.
+
+2. Add route to application routing.yml (example):
+
+``` yaml
+# app/config/routing.yml
+
+ArtseldOpeninviterBundle:
+    resource: "@ArtseldOpeninviterBundle/Resources/config/routing.yml"
+    prefix:   /open-inviter
+```
+
+You can use another url prefix.
 
 ### Step 5: Initialize assets
 

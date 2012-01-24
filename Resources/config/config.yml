@@ -1,8 +1,8 @@
 # src/Artseld/OpeninviterBundle/Resources/config/config.yml
 
 artseld_openinviter:
-    username: "dmitry-kozlovich"
-    private_key: "c0a0be8dcc0dfb2168f02b941406b00e"
+    username: "USERNAME"
+    private_key: "API-KEY"
     plugins_cache_time: "1800"
     plugins_cache_file: "oi_plugins.php"
     cookie_path: "/tmp"
