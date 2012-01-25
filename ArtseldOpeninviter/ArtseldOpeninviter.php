@@ -276,6 +276,36 @@ class ArtseldOpeninviter extends \openinviter
     }
 
     /**
+     * Get plugin by email domain part
+     * @param $user
+     * @return bool|int|string
+     */
+    public function getPluginByDomain($user)
+    {
+        $user_domain = explode('@', $user);
+        if (!isset($user_domain[1])) {
+            return false;
+        }
+        $user_domain = $user_domain[1];
+        foreach ($this->availablePlugins as $plugin => $details)
+        {
+            $patterns = array();
+            if ($details['allowed_domains']) {
+                $patterns = $details['allowed_domains'];
+            } elseif (isset($details['detected_domains'])) {
+                $patterns = $details['detected_domains'];
+            }
+            foreach ($patterns as $domain_pattern) {
+                if (preg_match($domain_pattern, $user_domain)) {
+                    return $plugin;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Login action
      * @param $user
      * @param $pass
@@ -337,9 +367,8 @@ class ArtseldOpeninviter extends \openinviter
     {
         $text = '';
         $flag = false;
-        $i = 0;
         foreach ($array as $key => $val) {
-            if($flag) $text .= ",\n";
+            if ($flag) $text .= ",\n";
             $flag = true;
             $text .= "'{$key}'=>";
             if (is_array($val)) {
@@ -354,5 +383,4 @@ class ArtseldOpeninviter extends \openinviter
         return $text;
     }
 
-    // Переписать обращение к плагинам, авторизацию, чек, получение контактов и отправку
 }
