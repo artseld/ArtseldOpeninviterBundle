@@ -23,7 +23,7 @@ $_pluginInfo=array(
 	'type'=>'email',
 	'check_url'=>'http://yandex.ru',
 	'requirement'=>'email',
-	'allowed_domains'=>false,
+	'allowed_domains'=>array('/(yandex.ru)/i'),
 	'imported_details'=>array('first_name','middle_name','last_name','phone_home','email_1'),
 	);
 /**
