@@ -33,7 +33,7 @@ class ArtseldOpeninviter extends \openinviter
     protected $currentPlugin    = array();
     protected $internalParams   = array();
 
-    protected $customPlugins    = array('yandex');
+    protected $customPlugins    = array('gmail', 'yandex');
 
     /**
      * Construct Openinviter instance
