@@ -56,7 +56,7 @@ class Configuration implements ConfigurationInterface
                     ->defaultFalse()
                 ->end()
                 ->arrayNode('proxies')
-                    ->defaultValue(array())->cannotBeEmpty()
+                    /*->defaultValue(array())*/->cannotBeEmpty()
                 ->end()
                 ->scalarNode('stats')
                     ->defaultFalse()
