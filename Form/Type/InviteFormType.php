@@ -45,14 +45,11 @@ class InviteFormType extends AbstractType
         return 'artseld_openinviter_invite_form';
     }
 
+    /**
+     * @return array
+     */
     protected function getRecipientsChoices()
     {
-        $choices = array();
-        foreach ($this->contacts as $email => $name)
-        {
-            $choices[] = $email . ' | ' . $name;
-        }
-
-        return $choices;
+        return array_values($this->contacts);
     }
 }
