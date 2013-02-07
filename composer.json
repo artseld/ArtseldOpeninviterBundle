@@ -1,0 +1,28 @@
+{
+    "name": "artseld/openinviter-bundle",
+    "type": "symfony-bundle",
+    "description": "Openinviter service",
+    "keywords": ["openinviter", "service", "contacts", "addressbook"],
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Dmitry Kozlovich",
+            "email": "artseld@gmail.com"
+        },
+        {
+            "name": "Openinviter developers",
+            "homepage": "http://openinviter.com/"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.1,<2.3-dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Artseld\\OpeninviterBundle": ""
+        }
+    },
+    "target-dir": "Artseld/OpeninviterBundle"
+}
